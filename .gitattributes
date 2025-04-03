@@ -1,0 +1,1 @@
+home/.drawio/** filter=lfs diff=lfs merge=lfs -text
