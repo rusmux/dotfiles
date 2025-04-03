@@ -1,0 +1,74 @@
+default_install_hook_types: [commit-msg, pre-commit, pre-push]
+
+repos:
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v4.4.1
+    hooks:
+      - id: commitizen
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-toml
+      - id: check-json
+        exclude: private_Library/private_Application Support/private_Code/User
+      - id: check-xml
+      - id: check-docstring-first
+      - id: check-case-conflict
+      - id: check-added-large-files
+        args: [--maxkb=10240]
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: destroyed-symlinks
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: pretty-format-json
+        args: [--autofix, --no-ensure-ascii]
+        exclude: private_Library/private_Application Support/private_Code/User
+      - id: detect-aws-credentials
+        args: [--allow-missing-credentials]
+      - id: detect-private-key
+
+  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+    rev: 3.2.1
+    hooks:
+      - id: editorconfig-checker
+        alias: ec
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.2
+    hooks:
+      - id: gitleaks
+
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.37.0
+    hooks:
+      - id: yamllint
+        args: [--format, parsable, --strict, -d, '{extends: relaxed, rules: {line-length: {max: 120}}}']
+
+  - repo: https://github.com/lyz-code/yamlfix
+    rev: 1.17.0
+    hooks:
+      - id: yamlfix
+
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.22
+    hooks:
+      - id: mdformat
+        additional_dependencies:
+          - mdformat-gfm
+          - mdformat-ruff
+          - mdformat-shfmt
+
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.10.0.1
+    hooks:
+      - id: shellcheck
+        args: [-a, --format, gcc, -x]
+
+  - repo: https://github.com/scop/pre-commit-shfmt
+    rev: v3.11.0-1
+    hooks:
+      - id: shfmt
+        types: [shell]
+        exclude_types: []

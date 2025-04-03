@@ -1,0 +1,7 @@
+[
+    {
+        // conflicts with Micro exit command
+        "key": "ctrl+q",
+        "command": "-workbench.action.quickOpenView"
+    }
+]

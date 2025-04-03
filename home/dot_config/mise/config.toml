@@ -1,0 +1,6 @@
+[tools]
+helm = "latest"
+java = "graalvm-community-21"
+kubectl = "latest"
+node = "latest"
+terraform = "latest"
