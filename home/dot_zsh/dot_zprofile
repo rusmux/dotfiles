@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# Added by Toolbox App
+export PATH="$PATH:/Users/rusmux/Library/Application Support/JetBrains/Toolbox/scripts"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+# shellcheck disable=SC1091
+source "$HOME/.orbstack/shell/init.zsh" 2>/dev/null || :
+
+for util in coreutils findutils grep gawk gsed gnu-tar make; do
+    export PATH="$HOMEBREW_PREFIX/opt/$util/libexec/gnubin:$PATH"
+done
+for util in diffutils curl zip lsof file-formula; do
+    export PATH="$HOMEBREW_PREFIX/opt/$util/bin:$PATH"
+done
