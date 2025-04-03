@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2034
+
+### ? OMZ ###
+
+export ZSH="$ZDOTDIR/omz"
+zstyle ":omz:update" mode auto
+
+# syntax-highlighting must be the last plugin sourced
+plugins=(git gitignore brew docker docker-compose helm uv rsync ssh-agent pre-commit aliases dirhistory
+  encode64 gnu-utils zoxide mise starship
+  # custom
+  autoupdate you-should-use zsh-autosuggestions zsh-syntax-highlighting)
+
+export YSU_MODE=ALL
+export YSU_HARDCORE=1
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
+# shellcheck disable=SC1091
+source "$ZSH"/oh-my-zsh.sh
+
+bindkey "^[[Z" complete-word   # shift-tab
+bindkey "	" autosuggest-accept # tab
+
+# shift-arrow:
+bindkey "^[[1;2A" dirhistory_zle_dirhistory_down
+bindkey "^[[1;2B" dirhistory_zle_dirhistory_up
+bindkey "^[[1;2C" dirhistory_zle_dirhistory_future
+bindkey "^[[1;2D" dirhistory_zle_dirhistory_back
+
+### ? EXPORT ###
+
+export EDITOR="micro"
+export LESSHISTFILE=-
+export GIT_LFS_SKIP_SMUDGE=1
+export BUILDX_BAKE_ENTITLEMENTS_FS=0 # disable Docker buildx checks
+export PYTORCH_ENABLE_MPS_FALLBACK=1
+export HOMEBREW_CASK_OPTS="--appdir=/Applications/My"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export KICS_QUERIES_PATH="$HOMEBREW_PREFIX"/opt/kics/share/kics/assets/queries
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+### ? OTHER ###
+
+source "$ZDOTDIR"/aliases.sh
+source "$ZDOTDIR"/mamba-init.sh
+
+# breaks other commands
+# source "$ZDOTDIR"/ysu.sh
+
+### ? BOTTOM ###
+
+eval "$(atuin init zsh)"

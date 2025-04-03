@@ -1,0 +1,33 @@
+[core]
+quotePath = false # for UTF-8 chars in paths
+pager = delta
+
+[init]
+defaultBranch = main
+
+[include]
+path = /Users/rusmux/.config/gitalias/gitalias.txt
+
+[user]
+name = Ruslan Mukhametshin
+email = rusmux73@gmail.com
+
+[interactive]
+diffFilter = delta --color-only
+
+[delta]
+navigate = true # use n and N to move between diff sections
+line-numbers = true
+hyperlinks = true
+diff-so-fancy = true # theme
+
+[diff]
+colorMoved = default
+
+[merge]
+conflictstyle = zdiff3 # by delta
+
+# to skip Git LFS
+[filter "lfs"]
+smudge = git-lfs smudge --skip -- %f
+process = git-lfs filter-process --skip
