@@ -1,0 +1,2 @@
+sort = "lines"
+treat_doc_strings_as_comments = true

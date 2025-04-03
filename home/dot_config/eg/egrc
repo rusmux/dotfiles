@@ -1,0 +1,3 @@
+[eg-config]
+squeeze = true
+pager-cmd = 'bat -p'

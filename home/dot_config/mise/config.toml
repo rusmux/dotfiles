@@ -1,0 +1,20 @@
+[tools]
+bun = "latest"
+"gem:bashly" = "latest"
+go = "latest"
+helm = "latest"
+java = "graalvm-community-21"
+kubectl = "latest"
+node = "latest"
+"npm:ghosttime" = "latest"
+"pipx:sourcery" = "latest"
+ruby = "latest"
+rust = "latest"
+terraform = "latest"
+"ubi:Universal-Debloater-Alliance/universal-android-debloater-next-generation" = { version = "latest", rename_exe = "uad-ng" }
+
+[settings]
+experimental = true
+
+[settings.npm]
+bun = true
