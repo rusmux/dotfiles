@@ -1,0 +1,53 @@
+[include]
+    path = /Users/rusmux/.config/gitalias/gitalias.txt
+
+[user]
+    name = Ruslan Mukhametshin
+    email = rusmux73@gmail.com
+    signingkey = /Users/rusmux/.ssh/git_sign/id_ed25519.pub
+
+[core]
+    quotePath = false # for UTF-8 chars in paths
+    pager = delta
+
+[gpg]
+    format = ssh
+
+[init]
+    defaultBranch = main
+
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = version:refname
+
+[fetch]
+    all = true
+
+[commit]
+    gpgsign = true
+
+[push]
+    autoSetupRemote = true
+
+[merge]
+    conflictstyle = zdiff3 # by delta
+
+[diff]
+    algorithm = histogram
+    colorMoved = default
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true # use n and N to move between diff sections
+    line-numbers = true
+    hyperlinks = true
+    diff-so-fancy = true # theme
+
+# to skip Git LFS
+[filter "lfs"]
+    smudge = git-lfs smudge --skip -- %f
+    process = git-lfs filter-process --skip
