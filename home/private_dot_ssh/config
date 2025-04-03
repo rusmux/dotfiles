@@ -1,0 +1,27 @@
+# Added by OrbStack: 'orb' SSH host for Linux machines
+# This only works if it's at the top of ssh_config (before any Host blocks).
+# This won't be added again if you remove it.
+Include ~/.orbstack/ssh/config
+
+Host *
+    AddKeysToAgent yes
+    StrictHostKeyChecking no
+    IdentitiesOnly yes
+
+    ControlMaster auto
+    ControlPath ~/.ssh/control/%C
+    ControlPersist 300
+    ServerAliveInterval 60
+
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github/id_ed25519
+
+Host gitlab.com
+    HostName gitlab.com
+    User git
+    IdentityFile ~/.ssh/gitlab/id_ed25519
+
+Host git_sign
+    IdentityFile ~/.ssh/git_sign/id_ed25519
