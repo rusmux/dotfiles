@@ -2,7 +2,7 @@ default_install_hook_types: [commit-msg, pre-commit, pre-push]
 
 repos:
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.4.1
+    rev: v4.6.0
     hooks:
       - id: commitizen
 
@@ -36,7 +36,7 @@ repos:
         alias: ec
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.24.2
+    rev: v8.24.3
     hooks:
       - id: gitleaks
 
