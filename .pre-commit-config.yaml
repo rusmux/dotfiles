@@ -2,7 +2,7 @@ default_install_hook_types: [commit-msg, pre-commit, pre-push]
 
 repos:
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.4.1
+    rev: v4.6.1
     hooks:
       - id: commitizen
 
@@ -36,12 +36,12 @@ repos:
         alias: ec
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.24.2
+    rev: v8.25.1
     hooks:
       - id: gitleaks
 
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.37.0
+    rev: v1.37.1
     hooks:
       - id: yamllint
         args: [--format, parsable, --strict, -d, '{extends: relaxed, rules: {line-length: {max: 120}}}']
