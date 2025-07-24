@@ -1,0 +1,200 @@
+{
+  // ? IDE
+  // Window
+  "window.restoreFullscreen": true,
+  "window.commandCenter": false,
+  "window.zoomLevel": 0.35, // increase global font size from 13 to ~14 px
+  // Workbench
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "One Dark Pro Night Flat",
+  "workbench.colorCustomizations": {
+    "gitDecoration.untrackedResourceForeground": "#e06c75",
+    "terminal.selectionBackground": "#264f78",
+    "terminal.findMatchHighlightBackground": "#264f78"
+  },
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+  "workbench.tree.indent": 16,
+  "workbench.localHistory.maxFileSize": 512, // KB
+  "workbench.editorLargeFileConfirmation": 32, // MB
+  "workbench.editor.wrapTabs": true,
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.navigationControl.enabled": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.editorAssociations": {
+    "*.md": "vscode.markdown.preview.editor",
+    "*.copilotmd": "vscode.markdown.preview.editor"
+  },
+  // Explorer
+  "explorer.autoReveal": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  "explorer.confirmDelete": false,
+  "explorer.decorations.badges": false,
+  // Files
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.bats": "shellscript",
+    "*.compose.yaml": "dockercompose",
+    "Brewfile": "shellscript"
+  },
+  "files.exclude": {
+    "**/.idea": true,
+    // Python
+    "**/__pycache__": true,
+    "**/.ipynb_checkpoints": true,
+    "**/.virtual_documents": true,
+    "**/.ruff_cache": true,
+    "**/.mypy_cache": true,
+    "**/.pytest_cache": true,
+    "**/*.coverage*": true
+  },
+  "files.watcherExclude": {
+    "**/.idea": true,
+    "**/node_modules": true,
+    // Python
+    "**/.venv": true,
+    "**/__pycache__": true,
+    "**/.ipynb_checkpoints": true,
+    "**/.virtual_documents": true,
+    "**/.ruff_cache": true,
+    "**/.mypy_cache": true,
+    "**/.pytest_cache": true,
+    "**/*.coverage*": true
+  },
+  // Search
+  "search.exclude": {
+    "**/.venv": true
+  },
+  "search.mode": "newEditor",
+  "search.defaultViewMode": "tree",
+  "search.searchEditor.defaultNumberOfContextLines": 3,
+  // Editor
+  "breadcrumbs.enabled": false,
+  "editor.fontSize": 13,
+  "editor.fontFamily": "JetbrainsMono Nerd Font Mono",
+  "editor.minimap.enabled": false,
+  "editor.accessibilitySupport": "off",
+  "editor.tabCompletion": "on",
+  "editor.rulers": [120],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "docker.docker"
+  },
+  // Terminal
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.scrollback": 2000,
+  "terminal.integrated.stickyScroll.enabled": true,
+  "terminal.integrated.tabs.title": "${cwdFolder}",
+  "terminal.integrated.tabs.description": "${process}${separator}${task}${separator}${local}",
+  "terminal.integrated.env.osx": {
+    "Q_NEW_SESSION": "1"
+  },
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.enableImages": true,
+  "terminal.external.osxExec": "/Applications/My/Programming/WezTerm.app",
+  // Other
+  "security.workspace.trust.untrustedFiles": "open",
+  "telemetry.telemetryLevel": "off",
+  "redhat.telemetry.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "yaml.format.printWidth": 120,
+  "yaml.format.singleQuote": true,
+  // ? TOOLS
+  // Git
+  "git.openRepositoryInParentFolders": "never",
+  "git.untrackedChanges": "separate",
+  "git.autofetch": true,
+  "git.autofetchPeriod": 300,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "scminput": false
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.nextEditSuggestions.fixes": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "gitlens.telemetry.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.views.lineHistory.avatars": false,
+  "gitlens.views.fileHistory.avatars": false,
+  "gitlens.views.commits.avatars": false,
+  "gitlens.views.commits.showStashes": true,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "gitlens.codeLens.scopes": ["containers"],
+  // K8s
+  "vs-kubernetes": {
+    "vs-kubernetes.crd-code-completion": "enabled",
+    "vs-kubernetes.ignore-recommendations": true
+  },
+  // Error Lens
+  "errorLens.onSave": true,
+  "errorLens.excludeBySource": ["cSpell"],
+  "errorLens.excludePatterns": ["**/*.ipynb"],
+  // Shellcheck
+  "shellcheck.ignorePatterns": {
+    "**/*.zsh": false,
+    "**/*.zshrc": false,
+    "**/zshrc": false,
+    "**/*.zprofile": false,
+    "**/zprofile": false,
+    "**/*.zshenv": false,
+    "**/zshenv": false
+  },
+  "shellcheck.run": "onSave",
+  "shellcheck.customArgs": ["-x"],
+  // ? LANGUAGES
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "rust-analyzer.restartServerOnConfigChange": true,
+  // Python
+  "python.terminal.activateEnvironment": false,
+  "ruff.nativeServer": true,
+  "python.analysis.typeCheckingMode": "standard",
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+  "jupyter.disableJupyterAutoStart": true,
+  "jupyter.askForKernelRestart": false,
+  // ? Other
+  "cSpell.language": "en,ru",
+  "cSpell.spellCheckDelayMs": 100,
+  "cSpell.diagnosticLevel": "Hint",
+  "c4.diagram.structurizr.enabled": true,
+  "c4.diagram.renderer": "structurizr",
+  "path-intellisense.showHiddenFiles": true,
+  "path-intellisense.autoTriggerNextSuggestion": true,
+  "docker.extension.dockerEngineAvailabilityPrompt": false,
+  "docker.extension.enableComposeLanguageServer": true,
+  "hediet.vscode-drawio.offline": false,
+  "biome.suggestInstallingGlobally": false,
+  "inlineChat.enableV2": true,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "nix.enableLanguageServer": true
+}

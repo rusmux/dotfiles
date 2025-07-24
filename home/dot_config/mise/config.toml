@@ -1,0 +1,17 @@
+[tools]
+go = "latest"
+helm = "latest"
+java = "graalvm-community-21"
+kubectl = "latest"
+node = "latest"
+python = "3.12"
+ruby = "latest"
+rust = "latest"
+terraform = "latest"
+"ubi:Universal-Debloater-Alliance/universal-android-debloater-next-generation" = { version = "latest", rename_exe = "uad-ng" }
+
+[settings]
+experimental = true
+
+[settings.npm]
+bun = true

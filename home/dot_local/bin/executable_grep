@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+exec -a grep "$HOME/.nix-profile/bin/ugrep" "$@"
