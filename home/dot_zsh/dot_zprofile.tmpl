@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC1091
+
+source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+export HOMEBREW_NO_ANALYTICS=1
+
+{{ if eq .chezmoi.os "darwin" -}}
+export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+source "$HOME/.orbstack/shell/init.zsh" 2>/dev/null || :
+{{ end -}}

@@ -1,0 +1,13 @@
+[".config/gitalias/gitalias.txt"]
+type = "file"
+url = "https://github.com/GitAlias/gitalias/raw/refs/heads/main/gitalias.txt"
+
+[".zsh/.kubectl_aliases"]
+type = "file"
+url = "https://github.com/ahmetb/kubectl-aliases/raw/refs/heads/master/.kubectl_aliases"
+
+# TODO: replace with a Nix package (https://github.com/NixOS/nixpkgs/pull/420244)
+[".local/bin/fzf-preview.sh"]
+type = "file"
+url = "https://raw.githubusercontent.com/junegunn/fzf/refs/heads/master/bin/fzf-preview.sh"
+executable = true
