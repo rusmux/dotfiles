@@ -1,0 +1,20 @@
+encryption = "age"
+
+[age]
+identity = "~/.config/chezmoi/key.txt"
+recipient = "age1pmn454xkjg8qj30v2reg8e702kjnjr2gwm0zeqyet3dszqav2eqsk87p0r"
+
+[diff]
+pager = "delta"
+
+[merge]
+command = "bash"
+args = [
+    "-c",
+    'cp "$1" "$2" && code --new-window --wait --merge "$3" "$1" "$2" "$4"',
+    "bash",
+    {{ printf "%q" "{{ .Target }}" }},
+    {{ printf "%q" "{{ .Target }}.base" }},
+    {{ printf "%q" "{{ .Destination }}" }},
+    {{ printf "%q" "{{ .Source }}" }},
+]
