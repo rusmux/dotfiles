@@ -1,0 +1,65 @@
+{
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "theme": "One Light",
+  "icon_theme": "JetBrains New UI Icons (Light)",
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_features": {
+    "calt": false
+  },
+  "base_keymap": "JetBrains",
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "terminal": {
+    "button": false,
+    "font_family": "JetBrainsMono Nerd Font Mono",
+    "blinking": "on",
+    "cursor_shape": "bar"
+  },
+  "agent": {
+    "button": false
+  },
+  "search": {
+    "button": false
+  },
+  "debugger": {
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "dock": "left"
+  },
+  "project_panel": {
+    "auto_reveal_entries": false,
+    "indent_guides": {
+      "show": "never"
+    }
+  },
+  "title_bar": {
+    "show_project_items": false,
+    "show_branch_name": false,
+    "show_user_picture": false
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false
+  },
+  "tabs": {
+    "git_status": true,
+    "file_icons": true
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  }
+}

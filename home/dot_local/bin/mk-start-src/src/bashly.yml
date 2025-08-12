@@ -1,0 +1,19 @@
+name: mk-start
+help: Start a Minikube cluster with better defaults
+version: 0.1.0
+
+catch_all:
+  label: Minikube arguments
+  help: Additional arguments for Minikube
+
+flags:
+  - long: --nodes
+    short: -n
+    arg: nodes
+    validate: integer
+    default: '2'
+    help: Number of nodes to create
+
+  - long: --cilium
+    short: -c
+    help: Use Cilium as the CNI plugin

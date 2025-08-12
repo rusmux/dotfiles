@@ -1,0 +1,65 @@
+[include]
+    path = ~/.config/gitalias/gitalias.txt
+
+[user]
+    name = Ruslan Mukhametshin
+    email = rusmux73@gmail.com
+    signingkey = ~/.ssh/git_sign/id_ed25519.pub
+
+[core]
+    quotePath = false # for UTF-8 chars in paths
+    pager = delta
+
+[gpg]
+    format = ssh
+
+[init]
+    defaultBranch = main
+
+[log]
+    date = human
+
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = version:refname
+
+[fetch]
+    all = true
+
+[commit]
+    gpgsign = true
+
+[push]
+    autoSetupRemote = true
+    followTags = true
+
+[merge]
+    conflictstyle = zdiff3 # by delta
+
+[diff]
+    algorithm = histogram
+    compactionHeuristic = true
+    renames = copies
+    colorMoved = default
+    mnemonicprefix = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true # use n and N to move between diff sections
+    hyperlinks = true
+    diff-so-fancy = true # theme
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge --skip -- %f
+    process = git-lfs filter-process --skip
+    required = true
+
+[lfs "customtransfer.xet"]
+  path = git-xet
+  args = transfer
+  concurrent = true
