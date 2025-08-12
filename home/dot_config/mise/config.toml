@@ -1,0 +1,29 @@
+[tools]
+# erlang = "latest"
+go = "latest"
+helm = "latest"
+kubectl = "latest"
+lua = { version = "5.1.5", os = ["macos"] }
+luajit = { version = "latest", os = ["macos"] }
+node = "latest"
+python = "3.12"
+rust = { version = "latest", profile = "minimal", components = "rustfmt,clippy" }
+terraform = { version = "latest", os = ["macos"] }
+"github:Universal-Debloater-Alliance/universal-android-debloater-next-generation" = { version = "latest", rename_exe = "uad-ng", os = [
+  "macos",
+] }
+# elixir = "latest"
+bun = "latest"
+
+[tools."github:Mikescher/better-docker-ps"]
+version = "latest"
+
+[tools."github:Mikescher/better-docker-ps".platforms]
+linux-x64 = { asset_pattern = "dops_linux-amd64-static" }
+macos-arm64 = { asset_pattern = "dops_macos-arm64" }
+
+[settings]
+experimental = true
+
+[settings.npm]
+bun = true

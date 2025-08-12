@@ -1,0 +1,17 @@
+{
+    "autostart": false,
+    "install_location": "/Applications/My/Programming/JetBrains",
+    "channel_rollback_max_history": 1,
+    "shell_scripts": {
+        "location": "~/Library/Application Support/JetBrains/Toolbox/scripts"
+    },
+    "ui": {
+        "backgroundEffects": "false"
+    },
+    "tools": {
+        "update_all_automatically": true
+    },
+    "jetbrains_account": {
+        "active": "15514834"
+    }
+}
