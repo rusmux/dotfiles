@@ -1,0 +1,8 @@
+{
+  "autosu": true,
+  "colorscheme": "dukelight-tc",
+  // "colorscheme": "one-dark",
+  "mkparents": true,
+  "ruler": false,
+  "scrollbar": true
+}

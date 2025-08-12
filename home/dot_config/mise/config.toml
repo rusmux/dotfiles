@@ -1,0 +1,20 @@
+[tools]
+erlang = "latest"
+go = "latest"
+helm = "latest"
+kubectl = "latest"
+lua = "5.1.5"
+luajit = "latest"
+node = "latest"
+python = "3.12"
+rust = { version = "latest", profile = "minimal", components = "rustfmt,clippy" }
+terraform = "latest"
+"ubi:Universal-Debloater-Alliance/universal-android-debloater-next-generation" = { version = "latest", rename_exe = "uad-ng" }
+elixir = "latest"
+bun = "latest"
+
+[settings]
+experimental = true
+
+[settings.npm]
+bun = true

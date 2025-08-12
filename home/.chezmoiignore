@@ -1,0 +1,14 @@
+key.txt.age
+.zsh/ohmyzsh/**/*cache*
+Library/Group Containers
+
+{{ if ne .chezmoi.os "darwin" }}
+Library
+
+.config/wezterm
+.config/zed
+{{ end }}
+
+{{ if ne .chezmoi.os "linux" }}
+.config/dops.conf
+{{ end }}
