@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+export EDITOR="micro"
+export ZDOTDIR="$HOME/.zsh"
+
+export PNPM_HOME="$XDG_DATA_HOME/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+{{ if eq .chezmoi.os "darwin" -}}
+export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+# shellcheck disable=SC1091
+source "$HOME/.orbstack/shell/init.zsh" 2>/dev/null || :
+{{ end -}}

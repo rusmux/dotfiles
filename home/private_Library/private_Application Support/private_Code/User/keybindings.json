@@ -1,0 +1,53 @@
+[
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "when": "terminalFocus",
+    "args": {
+      "text": "\\\r\n"
+    }
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "when": "terminalFocus",
+    "args": {
+      "text": "\\\r\n"
+    }
+  },
+  {
+    // conflicts with Micro exit command
+    "key": "ctrl+q",
+    "command": "-workbench.action.quickOpenView"
+  },
+  {
+    "key": "shift+alt+r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "shift+f6",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "shift+alt+r",
+    "command": "editor.action.changeAll",
+    "when": "editorTextFocus && !editorHasRenameProvider && !editorReadonly"
+  },
+  {
+    "key": "shift+f6",
+    "command": "-editor.action.changeAll",
+    "when": "editorTextFocus && !editorHasRenameProvider && !editorReadonly"
+  },
+  {
+    "key": "cmd+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  }
+]
