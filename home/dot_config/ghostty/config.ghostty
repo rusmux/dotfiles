@@ -1,0 +1,7 @@
+config-file = ?auto/theme.ghostty
+quit-after-last-window-closed = true
+shell-integration-features = ssh-env,ssh-terminfo
+
+font-feature = -calt
+font-feature = -clig
+font-feature = -liga
