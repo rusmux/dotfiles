@@ -1,0 +1,3 @@
+[profile expasoft-sandbox-storage-rw]
+region = ru-central1
+output = json

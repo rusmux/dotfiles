@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Required to work in non-interactive non-login shells (e.g., ssh <host> <command>)
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+
+export PATH="$HOME/.local/share/mise/shims:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+case $- in
+  *i*) exec zsh ;;
+esac

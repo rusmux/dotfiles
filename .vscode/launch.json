@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:chezmoi}/scripts/spelling",
+      "name": "Debug spelling (scripts/spelling)",
+      "program": "${workspaceFolder:chezmoi}/scripts/spelling/.build/debug/spelling",
+      "preLaunchTask": "swift: Build Debug spelling (scripts/spelling)"
+    },
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:chezmoi}/scripts/spelling",
+      "name": "Release spelling (scripts/spelling)",
+      "program": "${workspaceFolder:chezmoi}/scripts/spelling/.build/release/spelling",
+      "preLaunchTask": "swift: Build Release spelling (scripts/spelling)"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+.zsh/ohmyzsh/**/*cache*
+Library/Group Containers
+
+{{ if not (or (hasPrefix "cube" .chezmoi.hostname) (eq .chezmoi.hostname "gpu-ubu24-expasoft1")) }}
+.profile
+.bashrc
+{{ end }}
+
+{{ if ne .chezmoi.os "darwin" }}
+Library
+Documents
+
+.local/bin/defaults-diff
+
+.agents
+.claude
+.codex
+
+.config/agents
+.config/amneziavpn
+.config/mihomo
+.config/rclone
+.config/wezterm
+.config/ghostty
+.config/wireguard
+.config/zed
+{{ end }}
+
+{{ if ne .chezmoi.os "linux" }}
+.config/dops.conf
+.config/tealdeer
+.config/nix
+{{ end }}
