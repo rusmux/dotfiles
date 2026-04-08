@@ -1,0 +1,5 @@
+[tools]
+"npm:@upstash/context7-mcp" = "latest"
+"npm:@zereight/mcp-gitlab" = "latest"
+"pipx:mcp-atlassian" = "latest"
+"pipx:yandex-tracker-mcp" = "latest"

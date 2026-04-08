@@ -1,0 +1,126 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "ENABLE_LSP_TOOL": "1",
+    "ECC_DISABLED_HOOKS": "pre:write:doc-file-warning"
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(wc:*)",
+      "Bash(du:*)",
+      "Bash(cat:*)",
+      "Bash(echo:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(mkdir:*)",
+      "Bash(dvc:*)",
+      "Bash(prek:*)",
+      "Bash(mgrep:*)",
+      "Bash(firecrawl:*)",
+      "Bash(claude mcp:*)",
+      "Bash(git add:*)",
+      "Bash(gh search:*)",
+      "Bash(gh api:*)",
+      "Bash(go build:*)",
+      "Bash(uv:*)",
+      "Read",
+      "Search",
+      "Skill",
+      "WebFetch",
+      "WebSearch",
+      "mcp__plugin_context7-plugin_context7__resolve-library-id",
+      "mcp__plugin_context7-plugin_context7__query-docs",
+      "mcp__claude_ai_Hugging_Face__hub_repo_search",
+      "mcp__claude_ai_Hugging_Face__hub_repo_details",
+      "mcp__claude_ai_Hugging_Face__hf_doc_search",
+      "mcp__claude_ai_Hugging_Face__hf_doc_fetch",
+      "mcp__claude_ai_Hugging_Face__hf_hub_community",
+      "mcp__claude_ai_Hugging_Face__paper_search",
+      "mcp__github__get_file_contents",
+      "mcp__github__search_code"
+    ],
+    "defaultMode": "plan"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  },
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "firecrawl@claude-plugins-official": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "everything-claude-code@everything-claude-code": true,
+    "feature-dev@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "context7-plugin@context7-marketplace": true
+  },
+  "extraKnownMarketplaces": {
+    "everything-claude-code": {
+      "source": {
+        "source": "github",
+        "repo": "affaan-m/everything-claude-code"
+      },
+      "autoUpdate": true
+    },
+    "context7-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "upstash/context7"
+      },
+      "autoUpdate": true
+    }
+  },
+  "outputStyle": "Explanatory",
+  "sandbox": {
+    "enabled": false,
+    "autoAllowBashIfSandboxed": false,
+    "network": {
+      "allowedDomains": [
+        "*"
+      ],
+      "allowAllUnixSockets": true,
+      "allowLocalBinding": true
+    }
+  },
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Blueprinting",
+      "Rollercoastering",
+      "Platypusing",
+      "Busting",
+      "Teleporting",
+      "Inator-izing",
+      "Dimension-hopping",
+      "Time-traveling",
+      "Backyard-building",
+      "Foiling",
+      "Summer-maximizing",
+      "Perry-deploying",
+      "Evil-scheming"
+    ]
+  },
+  "effortLevel": "high",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/rusmux/.claude/hooks/rtk-rewrite.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
