@@ -1,0 +1,10 @@
+{
+  "overrides": [
+    {
+      "files": "home/private_Library/private_Application Support/private_Code/User/settings.json",
+      "options": {
+        "parser": "jsonc"
+      }
+    }
+  ]
+}

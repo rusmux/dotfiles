@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "home",
+    },
+    {
+      "path": "./.local/share/chezmoi",
+    },
+    {
+      "path": "./projects",
+    },
+  ],
+}

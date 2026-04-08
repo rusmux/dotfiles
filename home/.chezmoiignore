@@ -1,0 +1,27 @@
+.zsh/ohmyzsh/**/*cache*
+Library/Group Containers
+
+{{ if ne .chezmoi.os "darwin" }}
+Library
+Documents
+
+.local/bin/defaults-diff
+
+.agents
+.claude
+.codex
+
+.config/agents
+.config/mihomo
+.config/rclone
+.config/wezterm
+.config/ghostty
+.config/wireguard
+.config/zed
+{{ end }}
+
+{{ if ne .chezmoi.os "linux" }}
+.config/dops.conf
+.config/tealdeer
+.config/nix
+{{ end }}

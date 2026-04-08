@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+[ -f "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ] && . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+
+export EDITOR="micro"
+export ZDOTDIR="$HOME/.zsh"
+
+export XDG_CONFIG_HOME="$HOME/.config";
+export XDG_CACHE_HOME="$HOME/.cache";
+export XDG_DATA_HOME="$HOME/.local/share";
+export XDG_STATE_HOME="$HOME/.local/state";
+
+export HOMEBREW_NO_ANALYTICS="1";
+export HOMEBREW_NO_ENV_HINTS="1";
+
+export PATH="$HOME/.local/share/mise/shims:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+{{ if eq .chezmoi.os "darwin" -}}
+export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+# shellcheck disable=SC1091
+source "$HOME/.orbstack/shell/init.zsh" 2>/dev/null || :
+{{ end -}}

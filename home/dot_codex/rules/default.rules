@@ -1,0 +1,7 @@
+prefix_rule(pattern=["uv"], decision="allow")
+prefix_rule(pattern=["uvx"], decision="allow")
+prefix_rule(pattern=["prek"], decision="allow")
+prefix_rule(pattern=["script"], decision="allow")
+prefix_rule(pattern=["firecrawl"], decision="allow")
+prefix_rule(pattern=["nix", "flake"], decision="allow")
+prefix_rule(pattern=["nix", "run", "home-manager/master"], decision="allow")

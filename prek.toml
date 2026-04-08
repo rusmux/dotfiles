@@ -1,0 +1,114 @@
+default_install_hook_types = ["commit-msg", "pre-commit", "pre-push"]
+default_stages = ["pre-commit"]
+
+### ? COMMIT-MSG ###
+[[repos]]
+repo = "https://github.com/commitizen-tools/commitizen"
+rev = "v4.13.10"
+hooks = [{ id = "commitizen" }]
+
+### ? GENERAL ###
+[[repos]]
+repo = "builtin"
+hooks = [
+  { id = "trailing-whitespace", priority = 0 },
+  { id = "end-of-file-fixer", priority = 0, exclude = "lock|Application Support|obsidian" },
+  { id = "check-toml", priority = 0, exclude = ".chezmoiexternal.toml" },
+  { id = "check-xml", priority = 0, exclude = "drawio" },
+  { id = "check-json", priority = 0, exclude = "Code|micro" },
+  { id = "check-json5", priority = 0 },
+  { id = "check-added-large-files", args = [
+    "--maxkb=10240",
+  ], priority = 0 },
+  { id = "check-case-conflict", priority = 0 },
+  { id = "check-merge-conflict", priority = 0 },
+  { id = "check-symlinks", priority = 0 },
+  { id = "check-executables-have-shebangs", priority = 0 },
+]
+
+[[repos]]
+repo = "https://github.com/pre-commit/pre-commit-hooks"
+rev = "v6.0.0"
+hooks = [
+  { id = "pretty-format-json", args = [
+    "--autofix",
+    "--no-ensure-ascii",
+    "--no-sort-keys",
+  ], priority = 10, exclude = "Application Support|obsidian|micro" },
+  { id = "destroyed-symlinks", priority = 20 },
+]
+
+[[repos]]
+repo = "https://github.com/executablebooks/mdformat"
+rev = "1.0.0"
+hooks = [
+  { id = "mdformat", additional_dependencies = [
+    "mdformat-gfm",
+    "mdformat-shfmt",
+  ], priority = 10 },
+]
+
+[[repos]]
+repo = "https://github.com/gitleaks/gitleaks"
+rev = "v8.30.1"
+hooks = [{ id = "gitleaks", priority = 20 }]
+
+[[repos]]
+repo = "https://github.com/editorconfig-checker/editorconfig-checker.python"
+rev = "3.6.1"
+hooks = [
+  { id = "editorconfig-checker", alias = "ec", priority = 20, exclude = "Library|obsidian" },
+]
+
+### ? YAML ###
+[[repos]]
+repo = "https://github.com/lyz-code/yamlfix"
+rev = "1.19.1"
+hooks = [
+  { id = "yamlfix", args = [
+    "-c",
+    ".yamlfix.toml",
+  ], priority = 10, exclude = "templates|Chart.yaml|lock" },
+]
+
+[[repos]]
+repo = "https://github.com/adrienverge/yamllint.git"
+rev = "v1.38.0"
+hooks = [
+  { id = "yamllint", args = [
+    "--format",
+    "parsable",
+    "--strict",
+    "-d",
+    "{extends: relaxed, rules: {line-length: {max: 120}}}",
+  ], priority = 20, exclude = "templates|gh" },
+]
+
+### ? SHELL ###
+[[repos]]
+repo = "https://github.com/scop/pre-commit-shfmt"
+rev = "v3.13.1-1"
+hooks = [{ id = "shfmt", exclude_types = [], priority = 10 }]
+
+[[repos]]
+repo = "https://github.com/shellcheck-py/shellcheck-py"
+rev = "v0.11.0.1"
+hooks = [
+  { id = "shellcheck", args = [
+    "-a",
+    "--format",
+    "gcc",
+    "-x",
+  ], priority = 20 },
+]
+
+### ? DOCKER ###
+[[repos]]
+repo = "https://github.com/AleksaC/hadolint-py"
+rev = "v2.14.0"
+hooks = [
+  { id = "hadolint", args = [
+    "--failure-threshold",
+    "style",
+  ], priority = 20 },
+]
