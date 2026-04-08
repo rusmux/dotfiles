@@ -1,0 +1,6 @@
+config-file = ?auto/theme.ghostty
+quit-after-last-window-closed = true
+
+font-feature = -calt
+font-feature = -clig
+font-feature = -liga
